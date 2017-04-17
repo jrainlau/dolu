@@ -116,9 +116,6 @@ yarn run server
 
 # run dev
 yarn run dev
-
-# run build
-yarn run build
 ```
 
 > Note: `Dolu` is under `eslint-standard` rule, everyone should observe it, nor won't allow to be run or build.

@@ -2,11 +2,13 @@ var path = require('path')
 var webpack = require('webpack')
 
 module.exports = {
-  entry: ['babel-polyfill', './src/main.js'],
+  entry: './src/main.js',
+  // entry: './src/dolu.js',
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
     filename: 'build.js'
+    // filename: 'index.js'
   },
   module: {
     rules: [
