@@ -7,14 +7,15 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
-    filename: 'build.js'
-    // filename: 'index.js'
+    filename: 'build.js',
+    // filename: 'index.js',
+    libraryTarget: 'umd'
   },
   module: {
     rules: [
       {
         test: /\.js$/,
-        exclude: /node_modules/,
+        exclude: /node_modules|dist/,
         use: [
           'babel-loader',
           'eslint-loader'
