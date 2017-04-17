@@ -26,7 +26,7 @@ const dolu = new Dolu(config)
 | picker | String | selector of your `<input>` picker | `null` | no |
 | autoSend | Boolean | upload after file picking immediately | `false` | no |
 | quantity | Number | the quantity of photoes | `4` | no |
-| uploader | Function | defined your upload function, `dolu.send()` | `() => {}` | 否 |
+| uploader | Function | defined your upload function, `dolu.send()` | `() => {}` | no |
 | getDataUrls | Function | receive a `base64` array transform from your photoes | `() => {}` | no |
 | getFormDatas | Function | receive a `formdata` array transform from your photoes  | `() => {}` | no |
 

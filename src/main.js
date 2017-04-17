@@ -1,8 +1,6 @@
 import Dolu from '../dist/index.js'
 import axios from 'axios'
 
-console.log(Dolu)
-
 const dolu = new Dolu({
   picker: '#picker',
   uploader (data, index) {
