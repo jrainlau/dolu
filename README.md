@@ -109,7 +109,7 @@ dolu.send(base64Arr)
 ```
 git clone https://github.com/jrainlau/dolu.git
 
-cd dolu && yarn add
+cd dolu && yarn
 
 # open a server for uploading test
 yarn run server
