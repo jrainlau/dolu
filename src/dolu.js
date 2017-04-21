@@ -105,6 +105,13 @@ export default class Dolulu {
     this.formDataArr = []
   }
 
+  async getUrl (url, callback) {
+    if (isString(url)) {
+      const _formdata = await base64ToBlob(url)
+      callback(_formdata)
+    }
+  }
+
   send (arr) {
     if (!isFormData(arr[0])) {
       this._transformer(arr, true)
