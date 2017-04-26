@@ -3,19 +3,20 @@ var webpack = require('webpack')
 
 module.exports = {
   entry: './src/main.js',
-  // entry: './src/dolu.js',
+  // entry: ['babel-polyfill', './src/index.js'],
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
-    filename: 'build.js',
-    // filename: 'index.js',
+    // filename: 'build.js',
+    filename: 'index.js',
+    library: 'Dolu',
     libraryTarget: 'umd'
   },
   module: {
     rules: [
       {
         test: /\.js$/,
-        exclude: /node_modules|dist/,
+        exclude: /node_modules/,
         use: [
           'babel-loader',
           'eslint-loader'

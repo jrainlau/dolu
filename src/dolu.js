@@ -12,7 +12,7 @@ const defaultConfig = {
   getFormDatas () {}
 }
 
-export default class Dolulu {
+export default class Dolu {
   constructor (config = {}) {
     this.config = Object.assign(defaultConfig, config)
     this.dataUrlArr = []

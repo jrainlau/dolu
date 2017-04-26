@@ -33,9 +33,16 @@ const dolu = new Dolu(config)
 > uploader: receive two params: `data` and `index`. Param `data` is type of `formdata`, and param `index` is the number of a photo.
 
 ## 4. Methods
-`Dolu` has an instance method call `send()`. This method receive an array in type of `base64 string` or `formdata`, and upload it one by one after triggering it.
+- `send(Array)`. This method receive an array in type of `base64 string` or `formdata`, and upload it one by one after triggering it.
 ```
 dolulu.send(yourArray)
+```
+
+- `getUrl()`. This method receive one base64 string, and return a formdata as a param to the `callback` function.
+```
+dolu.getUrl(base64String, (formdata) => {
+  // do whatever you want
+})
 ```
 
 ## 5. Examples
