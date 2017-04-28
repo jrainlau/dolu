@@ -1,5 +1,5 @@
 const base64ToBlob = (base64) => {
-  const byteString = atob(base64.split(',')[1])
+  const byteString = atob(base64.replace(/\s/g, '').split(',')[1])
   const mimeString = base64.split(',')[0].split(':')[1].split(';')[0]
   const ab = new ArrayBuffer(byteString.length)
   const ia = new Uint8Array(ab)

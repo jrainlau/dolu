@@ -5,7 +5,6 @@ const bodyParser = require('body-parser')
 const fs = require('fs')
 
 const app = express()
-app.use(express.static('./public'))
 app.use(bodyParser({ limit: '50mb' }))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
@@ -41,7 +40,7 @@ app.post('/uploadBase64', (req, res) => {
   const base64Data = imgData.replace(/^data:image\/\w+;base64,/, '')
   const dataBuffer = Buffer.from(base64Data, 'base64')
   const fileName = Number(Math.random() * 100000).toFixed(0)
-  fs.writeFile(`./server/imgs_base64/${fileName}.txt`, dataBuffer, (err) => {
+  fs.writeFile(`./server/imgs_base64/${fileName}.png`, dataBuffer, (err) => {
     if (err) {
       res.end(err)
     } else {

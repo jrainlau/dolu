@@ -1,6 +1,6 @@
 {
   "name": "dolu",
-  "version": "0.1.8",
+  "version": "0.1.11",
   "description": "A photo upload tool",
   "main": "dist/index.js",
   "scripts": {

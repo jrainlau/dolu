@@ -2,12 +2,11 @@ var path = require('path')
 var webpack = require('webpack')
 
 module.exports = {
-  entry: './src/main.js',
-  // entry: ['babel-polyfill', './src/index.js'],
+  // entry: './src/main.js',
+  entry: ['babel-polyfill', './src/index.js'],
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
-    // filename: 'build.js',
     filename: 'index.js',
     library: 'Dolu',
     libraryTarget: 'umd'

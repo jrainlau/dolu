@@ -105,9 +105,9 @@ export default class Dolu {
     this.formDataArr = []
   }
 
-  async getUrl (url, callback) {
+  getUrl (url, callback) {
     if (isString(url)) {
-      const _formdata = await base64ToBlob(url)
+      const _formdata = base64ToBlob(url)
       callback(_formdata)
     }
   }
